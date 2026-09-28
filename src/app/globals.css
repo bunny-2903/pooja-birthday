@@ -1,0 +1,76 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --bg-deep-black: #080508;
+    --bg-midnight-purple: #100914;
+    --bg-dark-burgundy: #210b17;
+    --bg-deep-wine: #3a1024;
+    --bg-dark-rose: #5a1630;
+    --accent-gold: #d4af37;
+    --accent-gold-light: #fef08a;
+    --accent-pink-subtle: #f472b6;
+    --text-primary: #f8fafc;
+    --text-muted: #94a3b8;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    background-color: var(--bg-deep-black);
+    color: var(--text-primary);
+    overflow-x: hidden;
+  }
+
+  body {
+    background-color: var(--bg-deep-black);
+    color: var(--text-primary);
+    font-family: var(--font-sans), system-ui, sans-serif;
+    overflow-x: hidden;
+  }
+}
+
+/* Typography helper classes */
+.font-serif-romantic {
+  font-family: var(--font-serif), Georgia, serif;
+}
+
+.font-handwriting {
+  font-family: var(--font-handwriting), 'Dancing Script', cursive;
+}
+
+/* Custom glow effects */
+.glow-text-rose {
+  text-shadow: 0 0 12px rgba(244, 114, 182, 0.4), 0 0 24px rgba(90, 22, 48, 0.6);
+}
+
+.glow-text-gold {
+  text-shadow: 0 0 10px rgba(212, 175, 55, 0.5), 0 0 20px rgba(234, 179, 8, 0.3);
+}
+
+.glow-box-rose {
+  box-shadow: 0 0 35px -5px rgba(90, 22, 48, 0.5), 0 0 15px rgba(244, 114, 182, 0.2);
+}
+
+.glow-box-gold {
+  box-shadow: 0 0 35px -5px rgba(212, 175, 55, 0.3), 0 0 15px rgba(254, 240, 138, 0.2);
+}
+
+/* Custom noise/grain background */
+.bg-grain {
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.03'/%3E%3C/svg%3E");
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #080508;
+}
+::-webkit-scrollbar-thumb {
+  background: #3a1024;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #5a1630;
+}
